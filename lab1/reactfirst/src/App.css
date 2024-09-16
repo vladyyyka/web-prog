@@ -1,0 +1,96 @@
+/* Оформление основной страницы */
+body {
+  background: url('https://cdn-media.tass.ru/width/1200_4ce85301/tass/m2/uploads/i/20190830/5144292.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.calculator-container {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.calculator-title {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.calculator-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Оформление полей ввода */
+.input-number {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.input-number:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Кнопки калькулятора */
+.calc-btn {
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.calc-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Блок для отображения результата */
+.result-box {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Оформление групп кнопок */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
