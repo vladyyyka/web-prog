@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="Аноним"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="https://unpkg.com/emoji-picker-element"></script>
+    <title>Chat</title>
+  </head>
+  <body>
+    <h1 class="title">Чат</h1>
+    <div class="main">
+      <div class="name">
+        <span><i class="fa fa-user-circle"></i></span>
+        <input
+          type="text"
+          id="name-input"
+          class="name-input"
+          value="Аноним"
+          maxlength="22"
+        />
+        <span class="clients-total" id="client-total">В Сети: 2</span>
+        
+      </div>
+
+      <ul class="message-container" id="message-container"></ul>
+
+      <form class="message-form" id="message-form">
+        <input
+          type="text"
+          name="message"
+          id="message-input"
+          class="message-input"
+        />
+        <div class="v-divider"></div>
+        <button type="submit" class="send-button">
+          Отправить
+        </button>
+        <button type="button" class="emoji-button" id="emoji-open-button">😊</button>
+        <emoji-picker id="emoji-picker" style="display: none;"></emoji-picker>
+      </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+      integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg=="
+      crossorigin="Аноним"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
